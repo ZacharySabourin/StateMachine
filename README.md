@@ -12,7 +12,7 @@ des_input acts as a client that sends the "command" messages to the des_controll
 des_controller server thread interprets the message and will then unlock access to the protected state variable.
 des_contoller's client thread will then send an update to des_display with the new attempted state.
 
-des_display's job was just to display if the action taken was correct or not, and to display the current state.
+des_display acts as a server to receive the des_controller client thresd's messages. It then displays if the action taken was correct or not, and displays the current state.
 
 What I learned:
 - A firm grasp of multi-threading
